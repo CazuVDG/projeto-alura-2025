@@ -1,1 +1,251 @@
-ll
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Portfólio de Luiz Miguel</title>
+    <style>
+        :root {
+            --vasco-black: #000000;
+            --vasco-white: #FFFFFF;
+            --vasco-red: #CC0000;
+        }
+        
+        body {
+            background-color: var(--vasco-white);
+            color: var(--vasco-black);
+            font-family: 'Arial', sans-serif;
+        }
+        
+        header {
+            background-color: var(--vasco-black);
+            color: var(--vasco-white);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            color: var(--vasco-black);
+        }
+        
+        .badge {
+            background-color: var(--vasco-red);
+            color: var(--vasco-white);
+            margin: 0.2rem;
+        }
+        
+        .card {
+            border: 2px solid var(--vasco-black);
+            transition: transform 0.3s;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .btn-link {
+            color: var(--vasco-red);
+            text-decoration: none;
+        }
+        
+        .btn-link:hover {
+            color: var(--vasco-black);
+        }
+        
+        footer {
+            background-color: var(--vasco-black);
+            color: var(--vasco-white);
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        footer a {
+            color: var(--vasco-red);
+        }
+        
+        footer a:hover {
+            color: var(--vasco-white);
+        }
+        
+        .modal-header {
+            background-color: var(--vasco-black);
+            color: var(--vasco-white);
+        }
+        
+        .modal-title {
+            color: var(--vasco-white);
+        }
+        
+        .lead {
+            color: var(--vasco-red);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-fluid text-center">
+        <img src="https://media.tenor.com/gyuqx70UjmEAAAAe/emoji-feliz-ficando-triste-emoticon-feliz-ficando-triste.png" 
+             alt="Foto de perfil de Luiz Miguel" 
+             class="rounded-circle" 
+             width="150" 
+             height="150">
+        <p class="lead">Eu sou Luiz Miguel</p>
+        <h1>Estudante de Programação</h1>
+        <p>Sou estudante do 2º ano do Ensino Médio no Colégio Dom Pedro II e estou aprendendo programação. Tenho 16 anos e estou explorando o mundo da tecnologia e desenvolvimento de software. Veja os projetos que já desenvolvi!</p>
+        <p>Minhas habilidades</p>
+        <div>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">Lógica de Programação</span>
+        </div>
+    </header>
+
+    <main class="container mt-5">
+        <h2 class="text-center mb-4">Meus projetos</h2>
+        <div class="row">
+            <!-- Projeto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Site+Pessoal" class="card-img-top" alt="Imagem do projeto de site pessoal">
+                    <div class="card-body">
+                        <h5 class="card-title">Meu Primeiro Site Pessoal</h5>
+                        <p class="card-text">Este foi meu primeiro projeto em HTML e CSS, onde criei um site simples sobre meus hobbies e interesses. Aprendi a estruturar páginas web e aplicar estilos básicos.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projeto 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Calculadora" class="card-img-top" alt="Imagem do projeto de calculadora">
+                    <div class="card-body">
+                        <h5 class="card-title">Calculadora Interativa</h5>
+                        <p class="card-text">Uma calculadora funcional desenvolvida com JavaScript. Neste projeto, apliquei conceitos de lógica de programação e manipulação do DOM para criar uma interface interativa.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200?text=Jogo+da+Memória" class="card-img-top" alt="Imagem do projeto de jogo simples">
+                    <div class="card-body">
+                        <h5 class="card-title">Jogo da Memória</h5>
+                        <p class="card-text">Meu primeiro jogo desenvolvido com JavaScript. Um jogo da memória simples com cartas temáticas sobre tecnologia, onde pratiquei eventos e manipulação de arrays.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">Veja o projeto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Meu Primeiro Site Pessoal</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este foi meu primeiro contato com desenvolvimento web, onde aprendi os conceitos básicos de HTML e CSS. O site apresenta uma página simples com informações sobre mim, meus interesses e hobbies.</p>
+                    <p>Utilizei HTML para estruturar o conteúdo em seções como "Sobre Mim", "Meus Interesses" e "Contato". Aprendi sobre tags semânticas como header, main, section e footer.</p>
+                    <img src="https://via.placeholder.com/600x400?text=Site+Pessoal" class="img-fluid w-100 mb-3" alt="Imagem representativa do primeiro site pessoal">
+                    <p>Com CSS, explorei propriedades básicas de estilização como cores, fontes, margens e padding. Também implementei um layout simples que se adapta a diferentes tamanhos de tela usando media queries básicas.</p>
+                    <p>Este projeto foi importante para entender como a web funciona e como os navegadores interpretam códigos HTML e CSS. Foi meu primeiro passo no mundo do desenvolvimento web.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-dark">Ver projeto ao vivo</a>
+                    <a href="#" class="btn btn-outline-dark">Ver código do projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div class="modal fade" id="modal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Calculadora Interativa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este projeto foi meu primeiro contato com JavaScript e lógica de programação aplicada a interfaces web. Desenvolvi uma calculadora que realiza operações básicas como soma, subtração, multiplicação e divisão.</p>
+                    <img src="https://via.placeholder.com/600x400?text=Calculadora" class="img-fluid w-100 mb-3" alt="Imagem representativa da calculadora interativa">
+                    <p>Utilizei HTML para criar a estrutura da calculadora, com botões para números e operações. O CSS foi usado para estilizar a interface, dando um visual moderno e agradável.</p>
+                    <p>Com JavaScript, implementei a lógica da calculadora, aprendendo sobre:</p>
+                    <ul>
+                        <li>Manipulação do DOM para capturar cliques nos botões</li>
+                        <li>Armazenamento de valores em variáveis</li>
+                        <li>Estruturas condicionais para determinar a operação</li>
+                        <li>Funções para realizar os cálculos</li>
+                    </ul>
+                    <p>Este projeto foi fundamental para entender como JavaScript pode tornar páginas web interativas e dinâmicas, respondendo às ações do usuário.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-dark">Ver projeto ao vivo</a>
+                    <a href="#" class="btn btn-outline-dark">Ver código do projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="modal3" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Jogo da Memória</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Meu primeiro jogo desenvolvido com JavaScript puro. Um jogo da memória com cartas temáticas sobre tecnologia, onde o objetivo é encontrar todos os pares no menor número de tentativas.</p>
+                    <img src="https://via.placeholder.com/600x400?text=Jogo+da+Memória" alt="Imagem do jogo da memória" class="img-fluid w-100 mb-3">
+                    <p>Neste projeto, apliquei vários conceitos importantes de programação:</p>
+                    <ul>
+                        <li>Manipulação de arrays para armazenar e embaralhar as cartas</li>
+                        <li>Event listeners para capturar cliques nas cartas</li>
+                        <li>Lógica para comparar cartas e verificar pares</li>
+                        <li>Contagem de movimentos e tempo de jogo</li>
+                        <li>Feedback visual para o jogador</li>
+                    </ul>
+                    <p>O maior desafio foi implementar a lógica do jogo, especialmente a parte de virar as cartas, verificar os pares e determinar quando o jogo termina. Também adicionei um contador de tentativas e um temporizador para tornar o jogo mais desafiador.</p>
+                    <p>Este projeto me mostrou como a programação pode ser divertida e criativa, além de ter me ajudado a consolidar conceitos fundamentais de JavaScript.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-dark">Ver projeto ao vivo</a>
+                    <a href="#" class="btn btn-outline-dark">Ver código do projeto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="container-fluid py-5">
+        <div class="container">
+            <h2 class="text-center">Entre em contato</h2>
+            <div class="text-center">
+                <a href="mailto:seuemail@exemplo.com" class="btn btn-outline-light mx-2">
+                    <i class="bi bi-envelope"></i> Email
+                </a>
+                <a href="https://github.com/seuusuario" class="btn btn-outline-light mx-2">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+            </div>
+            <p class="text-center mt-4">© Copyright 2024. Produzido por Luiz Miguel</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
